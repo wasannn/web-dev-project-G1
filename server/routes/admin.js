@@ -11,7 +11,7 @@ const jwtSecret = process.env.JWT_SECRET;
 
 /**
  * 
- * Check Login
+ * check login
 */
 const authMiddleware = (req, res, next ) => {
   const token = req.cookies.token;
@@ -32,13 +32,13 @@ const authMiddleware = (req, res, next ) => {
 
 /**
  * GET /
- * Admin - Login Page
+ * admin - login page
 */
 router.get('/admin', async (req, res) => {
   try {
     const locals = {
       title: "Admin",
-      description: "Simple Blog created with NodeJs, Express & MongoDb."
+      description: "admin page"
     }
 
     res.render('admin/index', { locals, layout: adminLayout });
@@ -50,7 +50,7 @@ router.get('/admin', async (req, res) => {
 
 /**
  * POST /
- * Admin - Check Login
+ * admin - check login
 */
 router.post('/admin', async (req, res) => {
   try {
@@ -80,13 +80,13 @@ router.post('/admin', async (req, res) => {
 
 /**
  * GET /
- * Admin Dashboard
+ * admin dashboard
 */
 router.get('/dashboard', authMiddleware, async (req, res) => {
   try {
     const locals = {
       title: 'Dashboard',
-      description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+      description: 'add gifts'
     }
 
     const data = await Post.find();
@@ -105,13 +105,13 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
 
 /**
  * GET /
- * Admin - Create New Post
+ * admin - create New Post
 */
 router.get('/add-post', authMiddleware, async (req, res) => {
   try {
     const locals = {
       title: 'Add Post',
-      description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+      description: 'add gift'
     }
 
     const data = await Post.find();
@@ -129,14 +129,17 @@ router.get('/add-post', authMiddleware, async (req, res) => {
 
 /**
  * POST /
- * Admin - Create New Post
+ * admin - add post
 */
 router.post('/add-post', authMiddleware, async (req, res) => {
   try {
     try {
       const newPost = new Post({
         title: req.body.title,
-        body: req.body.body
+        body: req.body.body,
+        link: req.body.link,
+        
+       
       });
 
       await Post.create(newPost);
@@ -153,14 +156,14 @@ router.post('/add-post', authMiddleware, async (req, res) => {
 
 /**
  * GET /
- * Admin - Create New Post
+ * admin - updat post page
 */
 router.get('/edit-post/:id', authMiddleware, async (req, res) => {
   try {
 
     const locals = {
       title: "Edit Post",
-      description: "Free NodeJs User Management System",
+      description: "updating post page",
     };
 
     const data = await Post.findOne({ _id: req.params.id });
@@ -180,7 +183,7 @@ router.get('/edit-post/:id', authMiddleware, async (req, res) => {
 
 /**
  * PUT /
- * Admin - Create New Post
+ * admin - update post
 */
 router.put('/edit-post/:id', authMiddleware, async (req, res) => {
   try {
@@ -188,6 +191,8 @@ router.put('/edit-post/:id', authMiddleware, async (req, res) => {
     await Post.findByIdAndUpdate(req.params.id, {
       title: req.body.title,
       body: req.body.body,
+      link: req.body.link,
+      
       updatedAt: Date.now()
     });
 
@@ -200,25 +205,12 @@ router.put('/edit-post/:id', authMiddleware, async (req, res) => {
 });
 
 
-// router.post('/admin', async (req, res) => {
-//   try {
-//     const { username, password } = req.body;
-    
-//     if(req.body.username === 'admin' && req.body.password === 'password') {
-//       res.send('You are logged in.')
-//     } else {
-//       res.send('Wrong username or password');
-//     }
 
-//   } catch (error) {
-//     console.log(error);
-//   }
-// });
 
 
 /**
  * POST /
- * Admin - Register
+ * admin - register
 */
 router.post('/register', async (req, res) => {
   try {
@@ -243,7 +235,7 @@ router.post('/register', async (req, res) => {
 
 /**
  * DELETE /
- * Admin - Delete Post
+ * admin - delete post
 */
 router.delete('/delete-post/:id', authMiddleware, async (req, res) => {
 
@@ -259,11 +251,11 @@ router.delete('/delete-post/:id', authMiddleware, async (req, res) => {
 
 /**
  * GET /
- * Admin Logout
+ * admin logout
 */
 router.get('/logout', (req, res) => {
   res.clearCookie('token');
-  //res.json({ message: 'Logout successful.'});
+  
   res.redirect('/');
 });
 
