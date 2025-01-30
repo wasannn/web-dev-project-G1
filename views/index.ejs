@@ -1,29 +1,32 @@
-<div class="author">
-    <h1 class="author__heading">Hi im MMMMM</h1>
-    <p class="author__body">Web developer and content</p>
-</div>
-
-<!-- <img src="/img/hero-image.webp" alt="erson looking" class="hero-image" width="981" height="528"> -->
-
-<section class="articles">
-    <h2 class="articles__heading">Wish List:</h2>
-
-    <ul class="article-ul">
-        <% data.forEach(post=> { %>
-          <li>
-            <a href="/post/<%=post._id %>">
-              <span><%=post.title %></span>
-              <span class="article-list__date"><%=post.createdAt.toDateString() %></span>
-            </a>
-          </li>
-        <% }) %>
-      </ul>
+<div class="title">
+    <h1 class="title__heading">My Wishlist</h1>
+    <p class="title__body">Sharing What I need.</p>
+  </div>
+  <div class = "img">
+  <img src="/img/GIFT_ME_logo.jpg" alt="logo" class ="gift_img" width="300" height="300"></div>
+  
+  <section class="gifts">
+    <h2 class="gifts__heading">My Latest Gifts</h2>
+  
+    <ul class="gift-ul">
+      <% data.forEach(post => { %>
+        <li>
+          <a href="/post/<%= post._id %>">
+            <span><%= post.title %></span>
+            <span class="gift-list__date"><%= post.createdAt.toDateString() %></span>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  
+  
+    <% if (nextPage !== null) { %>
+      <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+    <% } %>
+   
+  
     
-      <% if (nextPage !== null) { %>
-        <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
-      <% } %>
-
-     
-
-    
-</section>
+  
+  
+  
+  </section>
