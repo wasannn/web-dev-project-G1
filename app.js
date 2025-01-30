@@ -13,7 +13,7 @@ const { isActiveRoute } = require('./server/helpers/routeHelpers');
 const app = express();
 const PORT = process.env.PORT || 5000;
   
-// Connect to DB
+//connect to database
 connectDB();
 
 app.use(express.urlencoded({ extended: true }));
@@ -28,12 +28,12 @@ app.use(session({
   store: MongoStore.create({
     mongoUrl: process.env.MONGODB_URI
   }),
-  //cookie: { maxAge: new Date ( Date.now() + (3600000) ) } 
+  
 }));
 
 app.use(express.static('public'));
 
-// Templating Engine
+// templating engine
 app.use(expressLayout);
 app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
