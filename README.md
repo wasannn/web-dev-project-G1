@@ -57,7 +57,10 @@ Follow these steps to set up the project on your local machine:
 - https://www.youtube.com/watch?v=-foo92lFIto&list=PL4cUxeGkcC9hAJ-ARcYq_z6lDZV7kT1xD
 - https://getbootstrap.com/
 - https://www.youtube.com/watch?v=-foo92lFIto&list=PL4cUxeGkcC9hAJ-ARcYq_z6lDZV7kT1xD
+- https://www.bmc.com/blogs/rest-vs-crud-whats-the-difference/
+- https://www.geeksforgeeks.org/nodejs/
 - https://stackoverflow.com/questions/36325119/how-to-res-json-and-res-render-at-the-same-time-pass-mongo-db-to-angularjs
+- https://learning.postman.com/docs/introduction/overview/
 - https://nodejs.org/en/docs/
 - https://www.mongodb.com/docs/
 - https://expressjs.com/en/guide.html
