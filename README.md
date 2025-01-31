@@ -1,4 +1,4 @@
-# Project Report: Wishlist Website (Admin-Only)
+# Project Report: GIFT ME (Wishlist Website) (Admin-Only)
 
 ## Overview
 This project is a wishlist management website designed for a single user (admin). The system allows the admin to add, update, and delete wishlist items efficiently. It is built using Node.js for the backend and MongoDB for database management. The project aims to provide a seamless experience for managing wishlist items.
@@ -42,18 +42,22 @@ Follow these steps to set up the project on your local machine:
 - Implement authentication to ensure only the admin can access the wishlist.
 
 ## Screenshots
-[Insert relevant screenshots of the website UI]
+
+![Screen Shot 2025-01-30 at 9 15 48 PM 2](https://github.com/user-attachments/assets/e4c0d2f5-6d0d-44bb-bdef-0919bc47d869)
+![Screen Shot 2025-01-30 at 9 15 35 PM 2](https://github.com/user-attachments/assets/94960b60-bc32-49e0-9bce-84d78dee2f61)
 
 ## Future Work
-- Implement user roles to allow multiple users.
+- Allow multiple users to create wishlist.
 - Add categories for wishlist items.
-- Integrate email notifications for updates.
-- Implement a mobile-responsive design.
+- Add email notifications for updates.
+- Add who bought the gift section.
 
 ## Resources
-- Node.js Documentation: [https://nodejs.org/en/docs/](https://nodejs.org/en/docs/)
-- MongoDB Documentation: [https://www.mongodb.com/docs/](https://www.mongodb.com/docs/)
-- Express.js Guide: [https://expressjs.com/en/guide.html](https://expressjs.com/en/guide.html)
+- https://www.youtube.com/watch?v=-foo92lFIto&list=PL4cUxeGkcC9hAJ-ARcYq_z6lDZV7kT1xD
+- https://stackoverflow.com/questions/36325119/how-to-res-json-and-res-render-at-the-same-time-pass-mongo-db-to-angularjs
+- https://nodejs.org/en/docs/
+- https://www.mongodb.com/docs/
+- https://expressjs.com/en/guide.html](https://expressjs.com/en/guide.html
 
 ## Team Members
 - Madawee Alhathloul
