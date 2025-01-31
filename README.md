@@ -62,7 +62,7 @@ Follow these steps to set up the project on your local machine:
 - https://www.mongodb.com/docs/
 - https://expressjs.com/en/guide.html
 
-## Team Members
+## Team Members (G1)
 - Madawee Alhathloul
 - Wasan Almansour
 - Nouf Alhomoud
