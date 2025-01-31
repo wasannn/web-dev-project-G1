@@ -4,7 +4,13 @@
 This project is a wishlist management website designed for a single user (admin). The system allows the admin to add, update, and delete wishlist items efficiently. It is built using Node.js for the backend and MongoDB for database management. The project aims to provide a seamless experience for managing wishlist items.
 
 ## Flow Chart
+For Admin
 ![Alt text](public/img/Flowchart_giftme.png)
+
+For others 
+<img width="992" alt="Screen Shot 2025-01-31 at 2 02 45 PM" src="https://github.com/user-attachments/assets/79c73736-4450-4ed0-9963-aec6bff87b80" />
+
+
 
 
 ## Setup
