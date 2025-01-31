@@ -20,13 +20,13 @@ Follow these steps to set up the project on your local machine:
    ```
 3. **Install dependencies:**
    ```bash
-   npm install
+   npm i bcrypt connect-mongo cookie-parser dotenv ejs express express-ejs-layouts express-session jsonwebtoken method-override mongoose
    ```
 4. **Set up environment variables:**
    Create a `.env` file and add the required configurations, such as MongoDB connection string.
 5. **Run the application:**
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Technologies Used
