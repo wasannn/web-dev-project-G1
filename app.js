@@ -44,6 +44,8 @@ app.locals.isActiveRoute = isActiveRoute;
 
 app.use('/', require('./server/routes/main'));
 app.use('/', require('./server/routes/admin'));
+app.use('/api', require(('./server/routes/protectedAPI')));
+
 
 app.listen(PORT, ()=> {
   console.log(`App listening on port ${PORT}`);
