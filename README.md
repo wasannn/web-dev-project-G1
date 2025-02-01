@@ -41,8 +41,7 @@ Follow these steps to set up the project on your local machine:
 - **Backend:** Node.js with Express.js
 - **Database:** MongoDB
 - **Authentication:** JSON Web Token (JWT)
-- **Frontend:** HTML, CSS, JavaScript 
-- **Version Control:** Git & GitHub
+- **Frontend:** HTML, CSS, JavaScript, EJS 
 
 ## Goals
 - Provide an easy to use wishlist management system for a single admin user.
