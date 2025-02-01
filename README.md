@@ -5,7 +5,8 @@ This project is a wishlist management website designed for a single user (admin)
 
 ## Flow Chart
 For Admin
-![Alt text](public/img/Flowchart_giftme.png)
+![Uploading Screen Shot 2025-02-01 at 12.02.05 PM.png…]()
+
 
 For others 
 <img width="992" alt="Screen Shot 2025-01-31 at 2 02 45 PM" src="https://github.com/user-attachments/assets/79c73736-4450-4ed0-9963-aec6bff87b80" />
